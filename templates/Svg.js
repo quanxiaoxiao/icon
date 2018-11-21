@@ -2,7 +2,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Svg = ({ viewBox, pathList, ...other }) => (
+const Svg = ({
+  viewBox,
+  pathList,
+  ...other
+}) => (
   <svg
     {...other}
     viewBox={viewBox}

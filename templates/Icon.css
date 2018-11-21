@@ -1,8 +1,12 @@
-.main {
-  width: 1.8rem;
-  height: 1.8rem;
+:export {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
 
-  path {
-    fill: #ccc;
-  }
+.main {
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
+  fill: var(--icon-color);
+  transition: fill 0.3s;
 }

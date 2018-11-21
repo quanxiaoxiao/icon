@@ -13,13 +13,19 @@ const defaultProps = {
   ],
 };
 
-const Icon = ({ code, className, ...other }) => {
+const Icon = ({
+  code,
+  className,
+  ...other
+}) => {
   const item = map[code] || defaultProps;
   return (
     <Svg
       pathList={item.pathList}
       viewBox={item.viewBox}
       className={cn(style.main, className)}
+      width={style.width}
+      height={style.height}
       {...other}
     />
   );
