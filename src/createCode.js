@@ -9,7 +9,10 @@ const source = `const map = {
     viewBox: '{{viewBox}}',
     pathList: [
       {{#paths}}
-      '{{this}}',
+      {
+        d: '{{d}}',
+        fill: '{{fill}}',
+      },
       {{/paths}}
     ],
   },

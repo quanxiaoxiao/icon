@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const Svg = ({
   viewBox,
   pathList,
+  fill,
   ...other
 }) => (
   <svg
@@ -15,7 +16,8 @@ const Svg = ({
       pathList.map((item, i) => (
         <path
           key={i}
-          d={item}
+          d={item.d}
+          fill={fill || item.fill}
         />
       ))
     }
@@ -25,6 +27,7 @@ const Svg = ({
 Svg.propTypes = {
   viewBox: PropTypes.string.isRequired,
   pathList: PropTypes.array.isRequired,
+  fill: PropTypes.string,
 };
 
 export default Svg;

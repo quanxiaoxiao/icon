@@ -3,7 +3,7 @@ const concat = require('concat-stream');
 const getIconData = require('./getIconData');
 const createCode = require('./createCode');
 
-module.exports = ({ cookie, pid, ctoken }) => {
+module.exports = ({ cookie, pid, ctoken }, color) => {
   const req = http.request(({
     hostname: 'www.iconfont.cn',
     port: 80,
@@ -18,7 +18,7 @@ module.exports = ({ cookie, pid, ctoken }) => {
       const { data: { icons } } = JSON.parse(data);
       const list = icons.map(item => ({
         code: Number(item.unicode).toString(16),
-        ...getIconData(item.show_svg),
+        ...getIconData(item.show_svg, color),
       }));
       createCode(list);
     }));
