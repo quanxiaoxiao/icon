@@ -18,7 +18,7 @@ module.exports = ({ cookie, pid, ctoken }, color) => {
       const { data: { icons } } = JSON.parse(data);
       const list = icons.map(item => ({
         code: Number(item.unicode).toString(16),
-        ...getIconData(item.show_svg, color),
+        ...getIconData(item.show_svg),
       }));
       createCode(list);
     }));

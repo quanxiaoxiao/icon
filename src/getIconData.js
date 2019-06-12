@@ -1,12 +1,14 @@
 const cheerio = require('cheerio');
 
-module.exports = (str, color) => {
+module.exports = (str) => {
   const $ = cheerio.load(str);
   return {
     viewBox: $('svg').attr('viewBox'),
     paths: $('path').map((i, item) => ({
       d: $(item).attr('d'),
-      fill: $(item).attr('fill') || color,
+      ...$(item).attr('fill') ? {
+        fill: $(item).attr('fill'),
+      } : {},
     })).get(),
   };
 };
