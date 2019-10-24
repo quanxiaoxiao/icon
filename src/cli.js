@@ -40,7 +40,7 @@ req.on('response', (res) => {
       shelljs.mkdir('-p', destDir);
     }
     fs.writeFileSync(path.resolve(destDir, 'icons.json'), JSON.stringify(result));
-    console.log(`create icon count: ${Object.keys(result).length}`);
+    console.log(`create icon count: ${Object.keys(result).length} -> ${path.resolve(destDir, 'icons.json')}`);
   });
 });
 
