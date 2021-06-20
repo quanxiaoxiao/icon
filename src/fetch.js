@@ -59,8 +59,8 @@ module.exports = () => {
     });
   });
 
-  req.once('error', () => {
-    console.log('fetch error');
+  req.once('error', (error) => {
+    console.error(error);
   });
 
   req.end();
