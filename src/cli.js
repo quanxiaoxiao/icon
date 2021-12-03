@@ -1,6 +1,5 @@
 const yargs = require('yargs');
 
-
 yargs // eslint-disable-line
   .command(
     'fetch',
