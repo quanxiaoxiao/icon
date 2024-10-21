@@ -1,27 +1,26 @@
 {
   "name": "icon",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "",
-  "main": "./bin/index.js",
+  "type": "module",
   "bin": {
-    "icon": "./bin/index.js"
+    "icon": "./bin/cli.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@quanxiaoxiao/http-request": "^0.55.0",
+    "@quanxiaoxiao/http-utils": "^0.25.0",
     "cheerio": "^1.0.0-rc.10",
     "lodash": "^4.17.21",
-    "open": "^8.4.0",
+    "open": "^10.1.0",
     "shelljs": "^0.8.3",
     "yargs": "^17.3.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.27.1"
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.4.0",
+    "globals": "^15.3.0"
   }
 }
