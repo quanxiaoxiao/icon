@@ -2,8 +2,8 @@ import process from 'node:process';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import runFetch from './fetch.mjs';
-import display from './display.mjs';
 import getPackageInfo from './getPackageInfo.mjs';
+import brower from './brower.mjs';
 
 yargs(hideBin(process.argv))
   .command(
@@ -15,11 +15,11 @@ yargs(hideBin(process.argv))
     },
   )
   .command(
-    'display',
+    'brower',
     'open brower at project in iconfont',
     {},
     () => {
-      display();
+      brower();
     },
   )
   .version(getPackageInfo().version)
