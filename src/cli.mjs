@@ -1,9 +1,11 @@
 import process from 'node:process';
+
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+
+import brower from './brower.mjs';
 import runFetch from './fetch.mjs';
 import getPackageInfo from './getPackageInfo.mjs';
-import brower from './brower.mjs';
 
 yargs(hideBin(process.argv))
   .command(

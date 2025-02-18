@@ -1,4 +1,5 @@
 import open from 'open';
+
 import getConfig from './getConfig.mjs';
 
 export default async () => {

@@ -1,12 +1,14 @@
-import process from 'node:process';
-import path from 'node:path';
 import fs from 'node:fs';
-import shelljs from 'shelljs';
-import fp from 'lodash/fp.js';
+import path from 'node:path';
+import process from 'node:process';
+
 import request from '@quanxiaoxiao/http-request';
 import { decodeContentToJSON } from '@quanxiaoxiao/http-utils';
-import getConfig from './getConfig.mjs';
+import fp from 'lodash/fp.js';
+import shelljs from 'shelljs';
+
 import decodeIcon from './decodeIcon.mjs';
+import getConfig from './getConfig.mjs';
 
 export default async () => {
   const config = getConfig();

@@ -10,17 +10,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@quanxiaoxiao/http-request": "^0.55.0",
-    "@quanxiaoxiao/http-utils": "^0.25.0",
+    "@quanxiaoxiao/http-request": "^0.57.0",
+    "@quanxiaoxiao/http-utils": "^0.27.0",
     "cheerio": "^1.0.0-rc.10",
+    "chroma-js": "^3.1.2",
     "lodash": "^4.17.21",
     "open": "^10.1.0",
     "shelljs": "^0.8.3",
     "yargs": "^17.3.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.3.0",
-    "eslint": "^9.4.0",
-    "globals": "^15.3.0"
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.15.0"
   }
 }
